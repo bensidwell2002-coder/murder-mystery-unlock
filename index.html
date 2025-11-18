@@ -44,19 +44,19 @@
 <h1>SECURITY VERIFICATION</h1>
 <p>Answer all questions correctly to unlock the restricted file.</p>
 
-<label>Question 1:</label>
+<label>Question 1: What is the Queen of Clubs holding?</label>
 <input id="q1" />
 
-<label>Question 2:</label>
+<label>Question 2:What is the distance from X to Y in cm?</label>
 <input id="q2" />
 
-<label>Question 3:</label>
+<label>Question 3:How many Clubs are there?</label>
 <input id="q3" />
 
-<label>Question 4:</label>
+<label>Question 4: What colour is a Spade?</label>
 <input id="q4" />
 
-<label>Question 5:</label>
+<label>Question 5: How many sides does a diamond have?</label>
 <input id="q5" />
 
 <button onclick="checkAnswers()">VERIFY</button>
@@ -65,16 +65,16 @@
 
 <div id="clue">
   <h2>RESTRICTED FILE UNLOCKED</h2>
-  <p>This is where your clue goes!</p>
+  <p>Diamonds sat opposite Spades</p>
 </div>
 
 <script>
 function checkAnswers() {
-  const a1 = "sword";
-  const a2 = "clubs";
+  const a1 = "Rose";
+  const a2 = "10";
   const a3 = "12";
-  const a4 = "casino";
-  const a5 = "king";
+  const a4 = "Black";
+  const a5 = "4";
 
   const q1 = document.getElementById("q1").value.toLowerCase().trim();
   const q2 = document.getElementById("q2").value.toLowerCase().trim();
