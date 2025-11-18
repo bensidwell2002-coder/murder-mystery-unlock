@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Access Verification Terminal</title>
+  <style>
+    body {
+      background: #0b0b0b;
+      color: #00ffcc;
+      font-family: monospace;
+      padding: 40px;
+    }
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 300px;
+      background: #111;
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+    }
+    #clue {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #00ffcc;
+      display: none;
+    }
+    #error {
+      color: #ff4444;
+      margin-top: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #00ffcc;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>SECURITY VERIFICATION</h1>
+<p>Answer all questions correctly to unlock the restricted file.</p>
+
+<label>Question 1:</label>
+<input id="q1" />
+
+<label>Question 2:</label>
+<input id="q2" />
+
+<label>Question 3:</label>
+<input id="q3" />
+
+<label>Question 4:</label>
+<input id="q4" />
+
+<label>Question 5:</label>
+<input id="q5" />
+
+<button onclick="checkAnswers()">VERIFY</button>
+
+<p id="error"></p>
+
+<div id="clue">
+  <h2>RESTRICTED FILE UNLOCKED</h2>
+  <p>This is where your clue goes!</p>
+</div>
+
+<script>
+function checkAnswers() {
+  const a1 = "sword";
+  const a2 = "clubs";
+  const a3 = "12";
+  const a4 = "casino";
+  const a5 = "king";
+
+  const q1 = document.getElementById("q1").value.toLowerCase().trim();
+  const q2 = document.getElementById("q2").value.toLowerCase().trim();
+  const q3 = document.getElementById("q3").value.toLowerCase().trim();
+  const q4 = document.getElementById("q4").value.toLowerCase().trim();
+  const q5 = document.getElementById("q5").value.toLowerCase().trim();
+
+  if (q1 === a1 && q2 === a2 && q3 === a3 && q4 === a4 && q5 === a5) {
+    document.getElementById("clue").style.display = "block";
+    document.getElementById("error").innerText = "";
+  } else {
+    document.getElementById("error").innerText = "ACCESS DENIED — Incorrect answers detected.";
+  }
+}
+</script>
+
+</body>
+</html>
